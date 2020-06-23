@@ -22,12 +22,12 @@ samples, guidance on mobile development, and a full API reference.
 
 ### Profile page
 
-- [ ] Scrollable page throw CustomScrollView with user profile & post
-- [ ] User profile
-- [ ] User posts
+- [X] Scrollable page throw CustomScrollView with user profile & post
+- [X] User profile
+- [X] User posts
 
 ### Server Linking
 
-- [ ] Profile downloading in json format
-- [ ] Models definition (profile, user, post)
-- [ ] Model creation to json base startup
+- [X] Profile downloading in json format
+- [X] Models definition (profile, user, post)
+- [X] Model creation to json base startup
