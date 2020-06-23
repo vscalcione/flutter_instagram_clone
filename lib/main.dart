@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
+import 'package:flutter_instagram_clone/provider/profile.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -51,7 +53,18 @@ class RootPage extends StatelessWidget {
   }
 }
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends StatefulWidget{
+  @override
+  _ProfilePageState createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+  @override
+  void initState(){
+    downloadUserProfile();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -73,8 +86,9 @@ class ProfilePage extends StatelessWidget {
                   Row(
                     children: <Widget>[
                       CircleAvatar(
-                        radius: 35,
-                        backgroundColor: Colors.grey,
+                          radius: 35,
+                          backgroundImage: NetworkImage(
+                              'https://solemole.com/uploads/product/1664/66368065.jpg')
                       ),
                       SizedBox(width: 20),
                       Expanded(
@@ -118,26 +132,24 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.symmetric(vertical: 16),
-              decoration: BoxDecoration(
-                border: Border(top: BorderSide(color: Colors.black26, width: 1)),
-              ),
-              child: Row(
-                  children: List.generate(
-                      3,
-                          (index) => Expanded(
-                              child: Container(
-                                  child: Column(children: <Widget>[
-                                    Text("139", style: TextStyle(fontWeight: FontWeight.bold)),
-                                    SizedBox(height: 3),
-                                    Text(
-                                      "post",
-                                      style: TextStyle(color: Colors.black54)
-                                    ),
-                                  ])
-                              ))
-                  )
-              )),
+                padding: EdgeInsets.symmetric(vertical: 16),
+                decoration: BoxDecoration(
+                  border:
+                      Border(top: BorderSide(color: Colors.black26, width: 1)),
+                ),
+                child: Row(
+                    children: List.generate(
+                        3,
+                        (index) => Expanded(
+                                child: Container(
+                                    child: Column(children: <Widget>[
+                              Text("139",
+                                  style:
+                                      TextStyle(fontWeight: FontWeight.bold)),
+                              SizedBox(height: 3),
+                              Text("post",
+                                  style: TextStyle(color: Colors.black54)),
+                            ])))))),
           ],
         ),
       );
@@ -149,7 +161,15 @@ class ProfilePage extends StatelessWidget {
           crossAxisSpacing: 1,
           mainAxisSpacing: 1,
         ),
-        delegate: SliverChildListDelegate([]),
+        delegate: SliverChildListDelegate(List.generate(
+            12,
+            (index) => Container(
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: NetworkImage("https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+                        fit: BoxFit.cover,
+                  )),
+                )
+        )),
       );
-
 }
