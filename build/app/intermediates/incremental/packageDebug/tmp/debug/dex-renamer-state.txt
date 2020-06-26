@@ -1,4 +1,4 @@
-#Tue Jun 23 17:19:12 CEST 2020
-base.0=/media/vscalcione/Dati/dev/git-repository/flutter_instagram_clone/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
-renamed.0=classes.dex
+#Fri Jun 26 12:59:26 CEST 2020
+base.0=C\:\\Users\\francesco\\flutter_instagram_clone\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
+renamed.0=classes.dex
