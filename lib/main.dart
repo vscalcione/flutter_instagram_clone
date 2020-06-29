@@ -185,8 +185,7 @@ class _ProfilePageState extends State<ProfilePage> {
             (index) => Container(
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                    image: NetworkImage(
-                        posts[index].imageUrl),
+                    image: NetworkImage(posts[index].imageUrl),
                     fit: BoxFit.cover,
                   )),
                 ))),

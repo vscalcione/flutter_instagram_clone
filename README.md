@@ -31,3 +31,6 @@ samples, guidance on mobile development, and a full API reference.
 - [X] Profile downloading in json format
 - [X] Models definition (profile, user, post)
 - [X] Model creation to json base startup
+
+## Screenshot of Flutter App
+![screenshot](Screenshot_1593437645.png)

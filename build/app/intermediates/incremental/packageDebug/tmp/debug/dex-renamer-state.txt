@@ -1,4 +1,4 @@
-#Tue Jun 23 17:34:23 CEST 2020
+#Fri Jun 26 14:31:05 CEST 2020
 base.0=/media/vscalcione/Dati/dev/git-repository/flutter_instagram_clone/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
